@@ -1,4 +1,5 @@
 const items = [1, "Sahil", true, 1.24];
+const newArray = ["something", 1, 2, 3];
 
 function Iterator(items) {
   this.items = items;

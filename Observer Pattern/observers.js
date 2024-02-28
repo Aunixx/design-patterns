@@ -21,7 +21,7 @@ Subject.prototype = {
 const subject = new Subject();
 
 function Observer1() {
-  console.log("Observer 1");
+  console.log("Observer 1 consoled");
 }
 
 function Observer2() {
@@ -30,6 +30,4 @@ function Observer2() {
 
 subject.subscribe(Observer1);
 subject.subscribe(Observer2);
-subject.unsubscribe(Observer2);
-
-subject.fire();
+subject.unsubscribe(Observer1);
