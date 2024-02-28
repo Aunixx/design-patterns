@@ -1,3 +1,5 @@
+// The Iterator pattern allows clients to effectively loop over a collection of objects.
+
 const items = [1, "Sahil", true, 1.24];
 
 function Iterator(items) {

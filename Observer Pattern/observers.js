@@ -1,3 +1,7 @@
+// The Observer pattern offers a subscription model in which objects subscribe to an event and get notified when the event occurs.
+// This pattern is the cornerstone of event driven programming, including JavaScript.
+// The Observer pattern facilitates good object-oriented design and promotes loose coupling.
+
 function Subject() {
   this.observers = [];
 }
