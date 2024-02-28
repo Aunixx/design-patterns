@@ -3,23 +3,26 @@
 // Essentially, Strategy is a group of algorithms that are interchangeable.
 
 function Fedex(pkg) {
-  this.calculate = () => {
+  this.calculate = (pkg) => {
     // Fedex calculations ...
-    return 2.45;
+    const costPerKg = 2.45 * pkg.weight;
+    return costPerKg.toFixed(2);
   };
 }
 
 function UPS(pkg) {
-  this.calculate = () => {
+  this.calculate = (pkg) => {
     // UPS calculations ...
-    return 1.56;
+    const costPerKg = 1.56 * pkg.weight;
+    return costPerKg.toFixed(2);
   };
 }
 
 function USPS(pkg) {
-  this.calculate = () => {
+  this.calculate = (pkg) => {
     // USPS calculations ...
-    return 4.5;
+    const costPerKg = 4.5 * pkg.weight;
+    return costPerKg.toFixed(2);
   };
 }
 
@@ -37,7 +40,7 @@ const fedex = new Fedex();
 const ups = new UPS();
 const usps = new USPS();
 const shipping = new Shipping();
-const pkg = { from: "Alabama", to: "Georgia", weight: 1.56 }; // Dummy package
+const pkg = { from: "Alabama", to: "Georgia", weight: 12 }; // Dummy package
 
 shipping.setStrategy(fedex);
 console.log("Fedex: " + shipping.calculate(pkg));

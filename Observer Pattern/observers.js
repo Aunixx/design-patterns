@@ -1,6 +1,8 @@
 // The Observer pattern offers a subscription model in which objects subscribe to an event and get notified when the event occurs.
 // This pattern is the cornerstone of event driven programming, including JavaScript.
 // The Observer pattern facilitates good object-oriented design and promotes loose coupling.
+// Cold Observables: When the data is created by the observable itself.
+// Hot Observables: When the data is produced outside the observable.
 
 function Subject() {
   this.observers = [];
